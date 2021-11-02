@@ -25,6 +25,11 @@ public class CategoriesController {
 
 //----------------------------------------------------------------------
 
+	@RequestMapping( value="/", method = RequestMethod.GET )
+	public String home() {
+		return "redirect:/product/new";
+	}
+	
 	@RequestMapping( value="/category/new", method = RequestMethod.GET )
 	public String displayaddcat(Model model) {
 		
